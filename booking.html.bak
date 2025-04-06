@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration House - Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Twitter-Style Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Celebration House Logo">
+        </div>
+        <ul id="sidebarMenu">
+            <!-- Sidebar will be populated dynamically by script.js -->
+        </ul>
+        <div id="logoutSection" style="display: none; padding: 20px;">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section active">
+                <h2>Book Your Celebration</h2>
+                <form id="bookingForm">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="text" id="contactNumber" name="contactNumber" required>
+
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+
+                    <label for="eventTime">Event Time:</label>
+                    <input type="time" id="eventTime" name="eventTime" required>
+
+                    <label for="package">Select Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="Basic Package" data-price="1499">Basic Package - ₹1499</option>
+                        <option value="Standard Package" data-price="2499">Standard Package - ₹2499</option>
+                        <option value="Premium Package" data-price="2999">Premium Package - ₹2999</option>
+                        <option value="Deluxe Package" data-price="3999">Deluxe Package - ₹3999</option>
+                    </select>
+
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" name="amount" readonly>
+
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

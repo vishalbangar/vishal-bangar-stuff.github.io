@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration House - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Twitter-Style Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Celebration House Logo">
+        </div>
+        <ul id="sidebarMenu">
+            <!-- Sidebar will be populated dynamically by script.js -->
+        </ul>
+        <div id="logoutSection" style="display: none; padding: 20px;">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section active">
+                <h2>Customer Profiles</h2>
+                <button id="toggleCustomers">Show/Hide Customers</button>
+                <div id="customerList"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

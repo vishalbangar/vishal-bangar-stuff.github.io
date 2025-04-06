@@ -1,0 +1,377 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #15202b; /* Twitter dark background */
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: 280px; /* Fixed width, like X sidebar */
+    background-color: #1a2633; /* Darker Twitter shade */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    color: #ffffff;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%; /* Full width of sidebar */
+}
+
+.sidebar-header img {
+    width: 50px; /* Slightly larger for X style */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain; /* Prevents stretching */
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 30px 0; /* More spacing for X style */
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px; /* Larger text for X style */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #1da1f2; /* Twitter blue */
+    color: #ffffff;
+}
+
+.sidebar .icon {
+    font-size: 28px; /* Larger icons for X style */
+    width: 50px; /* Wider for alignment */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.sidebar a:hover .icon, .sidebar a.active .icon {
+    transform: scale(1.2); /* Icon pop on hover */
+}
+
+.sidebar .text {
+    margin-left: 15px; /* Always visible */
+}
+
+.main-content {
+    margin-left: 280px; /* Adjusted for fixed sidebar */
+    flex-grow: 1;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Increased height to ensure image fits well */
+    background-image: url('header_image.jpg');
+    background-size: cover; /* Ensures image covers full width */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centers image both horizontally and vertically */
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.2); /* Increases brightness by 20% */
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Reduced opacity for brighter look */
+    z-index: 2;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #192734; /* Dark card background */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.section {
+    padding: 40px;
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    color: #1da1f2; /* Twitter blue */
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    color: #ccd6dd;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #38444d;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #253341;
+    color: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #1da1f2;
+    box-shadow: 0 0 8px rgba(29, 161, 242, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #1da1f2;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 50px; /* Twitter button style */
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0d8ecf;
+    transform: translateY(-2px);
+}
+
+#customerList, #salesDetails {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #253341;
+    border-radius: 10px;
+}
+
+#customerList {
+    display: none;
+}
+
+#filterSection {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#toggleCustomers {
+    background-color: #1da1f2;
+    margin: 20px 0 0;
+}
+
+#toggleCustomers:hover {
+    background-color: #0d8ecf;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px;
+    border-bottom: 1px solid #38444d;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #1a2633;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+#totalAmount {
+    font-weight: 600;
+    color: #00ff99;
+    margin-top: 15px;
+}
+
+#packageImage, #customerProfile {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#packageImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+#customerProfile div {
+    background-color: #253341;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    display: inline-block;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Home Section Styling */
+.home-content {
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 40px;
+    color: #1da1f2;
+    margin: 15px 0;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.home-content h3 {
+    font-size: 22px;
+    color: #ccd6dd;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.home-content h4 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+.home-content p {
+    font-size: 16px;
+    color: #8899a6;
+    line-height: 1.8;
+}
+
+.home-content .highlight {
+    color: #1da1f2;
+    font-weight: 600;
+}
+
+.home-content .emoji {
+    font-size: 28px;
+    margin-right: 12px;
+}
+
+.home-content .cta {
+    display: inline-block;
+    background-color: #1da1f2;
+    color: #ffffff;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-content .cta:hover {
+    background-color: #0d8ecf;
+    transform: translateY(-3px);
+}
+
+/* Customer Profile Styling */
+.customer-profile {
+    background-color: #253341;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.delete-btn {
+    background-color: #ff4d4d; /* Red color for delete button */
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+/* Sales Entry Styling */
+.sales-entry {
+    background-color: #253341;
+    padding: 15px;
+    margin-bottom: 20px; /* Gap between entries */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #38444d; /* Line color */
+    margin: 15px 0; /* Space above and below the line */
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    background-color: #ff4d4d; /* Red color for logout button */
+    color: #ffffff;
+    padding: 2px;
+    border: none;
+    border-radius: 40px;
+    width: 30%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}

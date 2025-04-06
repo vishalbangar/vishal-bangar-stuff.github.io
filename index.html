@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration House - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="logo.png" alt="Celebration House Logo" class="preloader-logo">
+    </div>
+
+    <!-- Hamburger Icon for Mobile -->
+    <div class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Twitter-Style Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Celebration House Logo">
+        </div>
+        <ul id="sidebarMenu">
+            <!-- Populated by script.js -->
+        </ul>
+        <div id="logoutSection" style="display: none; padding: 20px;">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section active" role="region" aria-label="Home Section">
+                <div class="home-content">
+                    <h1 class="animated-title" aria-label="Welcome to Celebration House!"><span class="emoji">🏡</span> Welcome to Celebration House!</h1>
+                    <h3 class="animated-tagline">"Celebrate Love, Joy & Togetherness in Style!"</h3>
+                    <h4 class="gradient-heading"><span class="emoji">🎉</span> What We Offer</h4>
+                    <div class="card-container">
+                        <div class="card">
+                            <p>Stunning Birthday Setups with Premium Décor</p>
+                        </div>
+                        <div class="card">
+                            <p>Romantic Anniversary Experiences with a Twist</p>
+                        </div>
+                        <div class="card">
+                            <p>Private Movie Nights for Couples – Pure Bliss!</p>
+                        </div>
+                    </div>
+                    <h4 class="gradient-heading"><span class="emoji">💖</span> Why Choose Us?</h4>
+                    <div class="card-container">
+                        <div class="card">
+                            <p>Elegant & Modern Celebration Spaces</p>
+                        </div>
+                        <div class="card">
+                            <p>Gourmet Food & Custom Themes</p>
+                        </div>
+                        <div class="card">
+                            <p>Exclusive Movie Experience</p>
+                        </div>
+                        <div class="card">
+                            <p>Prime Location, Seamless Booking</p>
+                        </div>
+                    </div>
+                    <h4 class="gradient-heading"><span class="emoji">📞</span> Book Now!</h4>
+                    <p>Contact us at <a href="tel:9762486649" class="highlight">9762486649</a> or DM us on our socials:</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/celebration_house_23?igsh=MW5pZ3gxMzB0d3B0ag%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@haru_viru-y5n?si=RdvIDqxsHn__9OC3" target="_blank" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <a href="booking.html" class="cta pulsating">Reserve Your Spot</a>
+                    <p class="highlight">"Turn Moments into Memories!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Preloader Script
+        window.addEventListener('load', function() {
+            document.querySelector('.preloader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

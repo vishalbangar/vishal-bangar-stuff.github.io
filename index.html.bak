@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration House - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Twitter-Style Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Celebration House Logo">
+        </div>
+        <ul id="sidebarMenu">
+            <!-- Sidebar will be populated dynamically by script.js -->
+        </ul>
+        <div id="logoutSection" style="display: none; padding: 20px;">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section active">
+                <div class="home-content">
+                    <h1><span class="emoji">🏡</span> Welcome to Celebration House!</h1>
+                    <h3>"Celebrate Love, Joy & Togetherness in Style!"</h3>
+                    
+                    <h4><span class="emoji">🎉</span> What We Offer</h4>
+                    <p>✔ Stunning Birthday Setups with Premium Décor<br>
+                       ✔ Romantic Anniversary Experiences with a Twist<br>
+                       ✔ Private Movie Nights for Couples – Pure Bliss!</p>
+
+                    <h4><span class="emoji">💖</span> Why Choose Us?</h4>
+                    <p>✨ Elegant & Modern Celebration Spaces<br>
+                       🍴 Gourmet Food & Custom Themes<br>
+                       🎥 Exclusive Movie Experience<br>
+                       📍 Prime Location, Seamless Booking</p>
+
+                    <h4><span class="emoji">📞</span> Book Now!</h4>
+                    <p>Contact us at <span class="highlight">[Your Info]</span> or DM <span class="highlight">[Socials]</span></p>
+                    <a href="booking.html" class="cta">Reserve Your Spot</a>
+
+                    <p class="highlight">"Turn Moments into Memories!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
